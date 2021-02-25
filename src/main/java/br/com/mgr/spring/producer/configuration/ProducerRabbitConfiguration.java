@@ -14,14 +14,14 @@ import java.util.Map;
 @Configuration
 public class ProducerRabbitConfiguration {
 
-    @Value("${spring.rabbitmq.request.routing-key.procuder}")
+    @Value("${spring.rabbitmq.request.routing-key.producer}")
     private String queue;
 
-    @Value("${spring.rabbitmq.request.exchange.procuder}")
+    @Value("${spring.rabbitmq.request.exchange.producer}")
     private String exchange;
 
-    @Value("${spring.rabbitmq.request.deadletter.procuder}")
-    private String deadletter;
+    @Value("${spring.rabbitmq.request.dead-letter.producer}")
+    private String deadLetter;
 
 
     @Bean
@@ -31,14 +31,14 @@ public class ProducerRabbitConfiguration {
 
     @Bean
     Queue deadletter(){
-        return new Queue(deadletter);
+        return new Queue(deadLetter);
     }
 
     @Bean
     Queue queue(){
         Map<String, Object> args = new HashMap<>();
         args.put("x-dead-letter-exchange", exchange);
-        args.put("x-dead-letter-routing-key", deadletter);
+        args.put("x-dead-letter-routing-key", deadLetter);
         return new Queue(queue, true , false, false, args);
     }
 
@@ -53,6 +53,6 @@ public class ProducerRabbitConfiguration {
     public Binding bindingDeadLetter(){
         return BindingBuilder.bind(deadletter())
                 .to(exchange())
-                .with(deadletter);
+                .with(deadLetter);
     }
 }

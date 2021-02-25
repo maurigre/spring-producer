@@ -1,4 +1,3 @@
-
 server:
   port: 8081
 spring:
@@ -12,5 +11,5 @@ spring:
         producer: ex.producer.mgr
       routing-key:
         producer: rk.producer.mgr
-      deadletter:
+      dead-letter:
         producer: dl.producer.mgr
