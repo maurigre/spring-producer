@@ -1,7 +1,7 @@
-package br.com.mgr.spring.producer.amqp.implementation;
+package br.com.mgr.spring.producer.core.amqp.implementation;
 
-import br.com.mgr.spring.producer.amqp.AmqpProducer;
-import br.com.mgr.spring.producer.dto.MessageDto;
+import br.com.mgr.spring.producer.core.amqp.AmqpProducer;
+import br.com.mgr.spring.producer.core.dto.MessageDto;
 import org.springframework.amqp.AmqpRejectAndDontRequeueException;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

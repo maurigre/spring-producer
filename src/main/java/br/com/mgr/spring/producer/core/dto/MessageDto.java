@@ -1,4 +1,4 @@
-package br.com.mgr.spring.producer.dto;
+package br.com.mgr.spring.producer.core.dto;
 
 public class MessageDto {
 

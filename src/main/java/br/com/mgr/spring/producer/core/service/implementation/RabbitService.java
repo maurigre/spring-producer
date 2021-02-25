@@ -1,8 +1,8 @@
-package br.com.mgr.spring.producer.service.implementation;
+package br.com.mgr.spring.producer.core.service.implementation;
 
-import br.com.mgr.spring.producer.amqp.AmqpProducer;
-import br.com.mgr.spring.producer.dto.MessageDto;
-import br.com.mgr.spring.producer.service.AmqpService;
+import br.com.mgr.spring.producer.core.amqp.AmqpProducer;
+import br.com.mgr.spring.producer.core.dto.MessageDto;
+import br.com.mgr.spring.producer.core.service.AmqpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
